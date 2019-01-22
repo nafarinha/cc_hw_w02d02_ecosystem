@@ -8,7 +8,12 @@ class Bear
     @stockpile = []
   end
 
-  def catch_fish()
-
+  def catch_fish(fish)
+    @stockpile << fish
   end
+
+  def roar()
+    return "grrrr"
+  end
+
 end

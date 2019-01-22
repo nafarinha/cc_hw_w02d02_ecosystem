@@ -26,11 +26,18 @@ class TestBear < MiniTest::Test
   end
 
   def test_catch_fish
+    fish_caught = @fish_2
     @river.add_fish(@fish_1)
     @river.add_fish(@fish_2)
-    @bear_1.catch_fish(@fish_2)
+    @bear_1.catch_fish(fish_caught)
+    @river.surrender_fish(fish_caught)
 
     assert_equal(1, @river.shoal_length())
-
   end
+
+  def test_bear_roar
+    assert_equal("grrrr", @bear_1.roar())
+  end
+
+
 end
