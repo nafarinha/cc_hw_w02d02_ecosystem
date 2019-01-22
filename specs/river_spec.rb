@@ -2,6 +2,7 @@ require("minitest/autorun")
 require("minitest/rg")
 require_relative("../river")
 require_relative("../fish")
+require_relative("../bear")
 
 class TestRiver < MiniTest::Test
 
@@ -10,6 +11,7 @@ class TestRiver < MiniTest::Test
     @fish_1 = Fish.new("pink salmon")
     @fish_2 = Fish.new("atlantic salmon")
     @river = River.new("Amazon")
+    @bear_1 = Bear.new("Yogi", "Grizzly")
   end
 
   def test_get_river_name
@@ -42,6 +44,7 @@ class TestRiver < MiniTest::Test
   def test_surrender_fish
     @river.add_fish(@fish_1)
     @river.add_fish(@fish_2)
+    @bear_1.catch_fish(@fish_2)
     @river.surrender_fish(@fish_2)
     assert_equal(1, @river.shoal_count())
   end
