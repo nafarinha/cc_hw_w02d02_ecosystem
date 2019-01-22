@@ -17,7 +17,7 @@ class Bear
   end
 
   def stockpile_count()
-    return @stockpile.length()
+    return @stockpile.count()
   end
 
 end
