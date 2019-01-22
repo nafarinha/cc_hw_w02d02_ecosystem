@@ -5,5 +5,4 @@ class Fish
     @name = name
   end
 
-#END OF CLASS
 end
