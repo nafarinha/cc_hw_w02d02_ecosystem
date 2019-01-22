@@ -34,7 +34,7 @@ class TestRiver < MiniTest::Test
   def test_surrender_fish
     @river.add_fish(@fish_1)
     @river.add_fish(@fish_2)
-    @river.surrender_fish()
+    @river.surrender_fish(@fish_2)
     assert_equal(1, @river.shoal_length())
   end
 

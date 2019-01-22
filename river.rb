@@ -14,8 +14,8 @@ class River
     @shoal << new_fish
   end
 
-  def surrender_fish
-    @shoal.pop()
+  def surrender_fish(fish)
+    @shoal.delete(fish)
   end
 
 end
