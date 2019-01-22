@@ -25,18 +25,7 @@ class TestBear < MiniTest::Test
     assert_equal(Array, @bear_1.stockpile.class())
   end
 
-  def test_catch_fish__add_to_bear
-    fish_caught = @fish_2
-    @river.add_fish(@fish_1)
-    @river.add_fish(@fish_2)
-    @bear_1.catch_fish(fish_caught)
-    @river.surrender_fish(fish_caught)
-
-    assert_equal(1, @bear_1.stockpile_count())
-  end
-
-
-  def test_catch_fish__remove_from_river
+  def test_catch_fish
     fish_caught = @fish_2
     @river.add_fish(@fish_1)
     @river.add_fish(@fish_2)
