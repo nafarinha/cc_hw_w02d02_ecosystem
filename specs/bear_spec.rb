@@ -39,5 +39,11 @@ class TestBear < MiniTest::Test
     assert_equal("grrrr", @bear_1.roar())
   end
 
+  def test_stockpile_count
+    @bear_1.catch_fish(@fish_1)
+    @bear_1.catch_fish(@fish_2)
+
+    assert_equal(2, @bear_1.stockpile_count())
+  end
 
 end

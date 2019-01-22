@@ -16,4 +16,8 @@ class Bear
     return "grrrr"
   end
 
+  def stockpile_count()
+    return @stockpile.length()
+  end
+
 end
