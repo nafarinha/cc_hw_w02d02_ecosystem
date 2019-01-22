@@ -1,1 +1,19 @@
+require("minitest/autorun")
+require("minitest/rg")
+require_relative("../fish")
 
+
+class TestFish
+
+  def setup
+    @fish_1 = Fish.new("salmon")
+
+  end
+
+  def test_get_fish
+    assert_equal("salmon", @fish_1.name())
+  end
+
+
+#END OF CLASS
+end
