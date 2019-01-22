@@ -20,22 +20,30 @@ class TestRiver < MiniTest::Test
     assert_equal(Array, @river.shoal.class())
   end
 
+  def test_shoal_count
+    @river.add_fish(@fish_1)
+    @river.add_fish(@fish_1)
+    @river.add_fish(@fish_2)
+
+    assert_equal(3, @river.shoal_count())
+  end
+
   def test_add_fish
     @river.add_fish(@fish_1)
-    assert_equal(1, @river.shoal_length())
+    assert_equal(1, @river.shoal_count())
   end
 
   def test_add_multiple_fishes
     @river.add_fish(@fish_1)
     @river.add_fish(@fish_2)
-    assert_equal(2, @river.shoal_length())
+    assert_equal(2, @river.shoal_count())
   end
 
   def test_surrender_fish
     @river.add_fish(@fish_1)
     @river.add_fish(@fish_2)
     @river.surrender_fish(@fish_2)
-    assert_equal(1, @river.shoal_length())
+    assert_equal(1, @river.shoal_count())
   end
 
 end

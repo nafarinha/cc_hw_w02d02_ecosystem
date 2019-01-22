@@ -6,8 +6,8 @@ class River
     @shoal = []
   end
 
-  def shoal_length()
-    return @shoal.length()
+  def shoal_count()
+    return @shoal.count()
   end
 
   def add_fish(new_fish)
